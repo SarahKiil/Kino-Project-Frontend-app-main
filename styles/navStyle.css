@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.outerNavBar {
+    background: white;
+    height: 55px;
+    width: 100vw;
+    box-shadow: 0px 1.5px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+html, body {
+    margin: 0;
+    background: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#leftNavContent, #rightNavContent {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    width: 40%;
+}
+
+#leftNavContent a, #rightNavContent a {
+    margin: 20px;
+}
+
+#rightNavContent {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.outerNavBar a:hover {
+    color: #8f8e8e;
+}
+
+@media screen and (max-width: 1400px) {
+    #leftNavContent {
+        display: none;
+    }
+
+    #filter, #filterSvg {
+        display: none;
+    }
+
+    #logo {
+        margin: 20px;
+    }
+}
+
+#hamburger-container{
+    z-index: 100;
+}
+
+@media screen and (min-width: 1400px) {
+    #hamburger-container {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    #leftNavContent {
+        display: none;
+    }
+
+    #rightNavContent {
+        display: none;
+    }
+
+    #filter, #filterSvg {
+        display: none;
+    }
+
+    #logo {
+        margin: 20px;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1050px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+}
+
+.navbar .menu-items {
+    display: flex;
+}
+
+.navbar .nav-container li {
+    list-style: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: #0e2431;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover {
+    font-weight: bolder;
+}
+
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+.nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+    display: block;
+    height: 26px;
+    width: 32px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+    padding-top: 120px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+    height: 100vh;
+    width: 100%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+}
+
+.navbar .menu-items li {
+    margin-bottom: 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#filterSvg {
+    height: 30px;
+    margin-right: 40px
+}
+
+#loginSvg {
+    height: 30px;
+}
+.logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 1.2rem;
+    color: #0e2431;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+.cinema-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+#selectedSeatsContainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    min-width: 150px;
+
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+}
+
+.cinema-seat {
+    max-height: 25px;
+    margin: 3px;
+
+}
+.marked-cell{
+    background: green;
+}
+.reserved-seat {
+    background: black;
+}
+
+.movie-details {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details img.film-poster {
+    max-width: 100%;
+    height: auto;
+}
+
+.movie-showings {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-showings h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#showing {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    cursor: pointer;
+}
+
+.showing-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.showing-card p {
+    margin: 0;
+}
+
+.show {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 4px;
+   background: rebeccapurple;
+    color: white;
+}
+@media print {
+    /* Hide the navigation bar and adjust other styles for printing */
+    .outerNavBar {
+        display: none;
+    }
+    
+    /* Define styles for the printed content, such as font size and margins */
+
+    /* Show the elements you want to print */
+    #ticket-container {
+        display: block;
+    }
+}

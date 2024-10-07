@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    --primary-color: #4B2990;
+    --secondary-color: #8f66c4;
+    --third-purple: #a48cc0;
+}
+
+#login-form {
+    display: none;
+    border: 1px solid black;
+    z-index: 5;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 550px;
+    padding: 20px;
+    background-color: rgb(238, 238, 238);
+    color: black;
+    box-shadow: 0 4px 20px #0000001a;
+    border-radius: 2px;
+    border-bottom-left-radius: 25px;
+    transition: .4s, .4s;
+    transition: opacity 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out forwards; /* CSS animation for fading in */
+
+}
+
+#login-form.hidden{
+    animation: fadeOut 0.3s ease-out forwards; /* Use fadeOut animation for hiding */
+}
+
+    /* Keyframes for the fadeIn animation */
+    @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+.movie-card {
+    height: 525px;
+    width: 325px;
+    display: inline-block;
+    margin: 20px;
+    margin-bottom: 70px;
+}
+
+#close {
+    position: absolute;
+    right: 5%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.movie-card {
+    max-height: 90%;
+    border-radius: 5px;
+}
+
+.movie-title {
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: start;
+    font-weight: bold;
+}
+
+.movie-btns-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.read-more-btn {
+    width: 150px;
+    height: 44px;
+    border-radius: 35px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid darkgrey;
+}
+
+.read-more-btn:hover {
+    background: black;
+    color: white;
+}
+
+.tickets-btn {
+    width: 150px;
+    height: 44px;
+    background: rebeccapurple;
+    border-radius: 35px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+.tickets-btn:hover {
+    background: #2d0000;
+}
+
+.ticket-btn-icon {
+    max-height: 80%;
+}
+
+.movie-poster-img {
+    border-radius: 5px;
+    height: 487px;
+    width: 324.66px;
+    cursor: pointer;
+}
+
+.movie-poster-img:hover {
+    transform: scale(1.02); /* Increase size by 10% (1 + 0.1) */
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+}
+
+#signup-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#signup-button:hover {
+    background-color: #4B2990;
+}
+
+#log-in-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#log-in-button:hover {
+    background-color: #4B2990;
+}
+
+#signup-ref-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rebeccapurple;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+#signup-ref-button:hover {
+    background-color: #4B2990;
+}
+
+.table-heading {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.custom-table th {
+    background-color: rebeccapurple;
+    color: #fff;
+    padding: 10px;
+}
+
+.custom-table td,
+.custom-table th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #fdfdfd;
+}
+
+#add-films-template {
+    display: flex;
+    margin-top: 100px   ;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#add-film-form {
+    margin-bottom: 20px;
+}
+
+#film-input, #theater-input, #ticketPrice-input, #timeAndDate-input {
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 300px;
+}
+
+#inspect-film {
+    margin-top: 10px;
+}
+
+#inspect-btn, #add-film-btn, #add-showing-btn, #print-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#inspect-btn:hover, #add-film-btn:hover, #print-btn:hover {
+    background-color: #4B2990;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+  }
+  
+  /* Modal Content */
+  .modal-content-film {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+  }
+  
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Add a new class for the movie banner */
+.movie-banner {
+    z-index: 0;
+    position: relative; /* Use relative positioning */
+    width: 100%; /* Ensure full width */
+    height: 520px; /* Set the banner height */
+    overflow-x: hidden; /* Add horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrolling */
+    white-space: nowrap; /* Prevent line breaks for inline elements */
+    flex-wrap: nowrap; /* Prevent items from wrapping */
+    background-color: var(--secondary-color);
+
+}
+
+/* Style for individual movie posters within the banner */
+.movie-poster {
+    display: inline-block; /* Display posters in a line */
+    width: 250px; /* Adjust the width as needed */
+    margin-right: 20px; /* Add margin between posters */
+    vertical-align: top; /* Align posters to the top */
+}
+
+/* Optional: Hide horizontal scrollbar */
+.movie-banner::-webkit-scrollbar {
+    display: none;
+}
+
+.banner-items {
+    display: flex; /* Arrange items horizontally */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for swiping */
+    gap: 1000px; /* Add gap between items */
+    
+    margin-top: 25px;
+    max-height: 500px;
+    padding-right: 50px;
+  }
+
+.banner-item{
+    display: flex;
+    gap: 40px;
+}
+
+.banner-item-div{
+    width: 800px;
+}
+
+.banner-item-header{
+    text-align: left;
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.banner-item-description{
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+    width: 1000px;
+    max-height: 400px;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.banner-item-poster{
+    max-width: 300px;
+    max-height: 450px;
+    border-radius: 5px;
+}
+
+.home-header{
+    background-color: var(--secondary-color);
+    text-align: left;
+}
+
+.home-text{
+    background-color: var(--third-purple);
+}
+  
+
+  #add-showings-template {
+    display: flex;
+    margin-top: 100px   ;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#add-showing-form {
+    margin-bottom: 20px;
+}
+.movie-details-container {
+    display: flex;
+    align-items: center;
+    max-width: 70%;
+}
+
+.movie-details-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details-container img {
+    max-height: 100%; /* Make the image fill the height of the container */
+    margin-right: 20px;
+}
+
+.movie-details-container ul {
+    list-style-type: none;
+    padding: 20;
+    display: flex; /* Use flexbox for the list */
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center;
+    min-width: 20%;
+}
+
+.movie-details-container p {
+    max-width: 40%;
+    justify-content: center;
+}
+
+.reservation-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reservation-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.reservation-seats {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.reservation-info {
+    margin: 0;
+}
+
+.reservation-title {
+    font-weight: bold;
+}
+
+.reservation-seat-info {
+    margin: 0;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #4B2990;
+}
+
+#reserve-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reserve-btn:hover {
+    background-color: #4B2990;
+}
+
+#movieInfo {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+#ticket-container{
+    width: 50%;
+    height: 70%;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+
+}
+#ticket{
+    text-align: center;
+}
+#item-list-ticket li{
+padding:20px;
+}
+
+@media print {
+    /* Hide the navigation bar and adjust other styles for printing */
+    #print-btn{
+        display: none;
+    }
+}

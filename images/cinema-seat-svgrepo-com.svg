@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="-14.66 0 139.807 139.807" xmlns="http://www.w3.org/2000/svg">
+  <g id="cinema_seat" data-name="cinema seat" transform="translate(-539.386 -380.488)">
+    <path id="Path_4527" data-name="Path 4527" d="M607.241,380.488H582.024a25.937,25.937,0,0,0-25.862,25.864v80.463H633.1V406.352A25.938,25.938,0,0,0,607.241,380.488Z" fill="#ed4d55"/>
+    <path id="Path_4528" data-name="Path 4528" d="M610.331,400.28c0,5.118-7.028,9.267-15.7,9.267s-15.7-4.149-15.7-9.267,7.028-9.268,15.7-9.268S610.331,395.162,610.331,400.28Z" fill="#fce4ab"/>
+    <rect id="Rectangle_1770" data-name="Rectangle 1770" width="19.614" height="37.934" transform="translate(584.827 479.021)" fill="#483b44"/>
+    <g id="Group_1938" data-name="Group 1938">
+      <path id="Path_4529" data-name="Path 4529" d="M613.546,513.183a4.312,4.312,0,0,0-4.311-4.312h-29.2a4.312,4.312,0,0,0-4.31,4.312v7.112h37.826Z" fill="#fce4ab"/>
+    </g>
+    <rect id="Rectangle_1771" data-name="Rectangle 1771" width="94.617" height="18.751" transform="translate(547.324 472.878)" fill="#bc2a38"/>
+    <path id="Path_4530" data-name="Path 4530" d="M539.386,438v56.614a6.916,6.916,0,0,0,6.9,6.9h9.879v-66.1h-14.19A2.594,2.594,0,0,0,539.386,438Zm107.91-2.586H633.1v66.1h9.88a6.917,6.917,0,0,0,6.9-6.9V438A2.594,2.594,0,0,0,647.3,435.411Z" fill="#483b44"/>
+  </g>
+</svg>

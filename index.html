@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigo Demo</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/navStyle.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.16/tailwind.min.css">
+</head>
+
+<body>
+    <nav id="menu" class="outerNavBar">
+        <div style="width: 40%;">
+            <div class="navbar" id="hamburger-container">
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox" name="" id="" />
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div>
+                    <div class="menu-items bg-white">
+                        <a href="aktuelleFilm" data-navigo>Aktuelle Film</a>
+                        <a href="users" class="admin-only" data-navigo>Show Users</a>
+                        <a href="addFilm" class="admin-only" data-navigo>Add Films</a>
+                        <a href="addShowing" class="admin-only" data-navigo>Lav forestilling</a>
+                        <a href="showReservations" class="user-only" data-navigo>Se reservationer</a>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;" id="leftNavContent">
+                <a href="aktuelleFilm" data-navigo>Aktuelle Film</a>
+                <a href="users" class="admin-only" data-navigo>Show Users</a>
+                <a href="addFilm" class="admin-only" data-navigo>Add Films</a>
+                <a href="addShowing" class="admin-only" data-navigo>Lav forestilling</a>
+                <a href="showReservations" class="user-only" data-navigo>Se reservationer</a>
+            </div>
+        </div>
+        <div id="logo_link">
+            <img id="logo" src="images/img.png" style="max-height: 47px; cursor: pointer;">
+        </div>
+        <div id="rightNavContent">
+            <div class="text-end" id="loggedInAs" style="display: flex; align-items: center">
+                <a class="nav-link" id="login-button" href="login" data-navigo>Sign In&nbsp;</a><a href="signUp"
+                    data-navigo className="mr-4">Sign Up</a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div style="overflow: hidden; max-width: 100vw; margin: 0" id="content"></div>
+
+    <script src="index.js" type="module"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+
+</html>
