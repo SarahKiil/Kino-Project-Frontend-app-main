@@ -49,7 +49,7 @@ async function loadMovies() {
             //readMoreLink.setAttribute("data-navigo", "");
             readMoreLink.className = "read-more-btn";
             const readMoreSpan = document.createElement("span");
-            readMoreSpan.textContent = "Læs Mere";
+            readMoreSpan.textContent = "Read More";
             readMoreLink.appendChild(readMoreSpan);
 
             // Create "Billeter" link
@@ -60,7 +60,7 @@ async function loadMovies() {
             ticketsLink.className = "tickets-btn";
             //ticketsLink.setAttribute("data-navigo", "");
             const ticketsSpan = document.createElement("span");
-            ticketsSpan.textContent = "Billeter";
+            ticketsSpan.textContent = "Tickets";
             const ticketsImg = document.createElement("img");
             ticketsImg.className = "ticket-btn-icon";
             ticketsImg.src = "images/ticket-outline.svg";
