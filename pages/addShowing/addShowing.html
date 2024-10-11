@@ -1,8 +1,9 @@
-<DOCTYPE html>
-    <head>
-        <link rel="stylesheet" href="styles/style.css"/>
-    </head>
-    <body>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
 <div class="template" id="add-showings-template">
     <div>
         <h1 class="text-center" style="font-size: 35px; font-weight: bolder; margin-bottom: 25px;">Add Showings</h1>
@@ -12,15 +13,14 @@
                     Select Movie
                 </option>
             </select>
-            <select id="theater-input" name="theater" aria-label="Select a theater">
-                <option default style="font-style: italic;">Select Theater</option>
-            </select>
+            <select id="theater-input" name="theater" aria-label="Vælg en Sal">
+                <option default style="font-style: italic;">Vælg Sal</option>
             </select>
             <input id="ticketPrice-input" type="text" placeholder="Enter Ticket Price">
             <input id="timeAndDate-input" type="datetime-local" placeholder="Enter Time And Date">
         </form>
 
-        <button id="add-showing-btn">Add Showing</button>
+        <button id="add-showing-btn">Tilføj Forestilling</button>
         <div class="mt-4">
             <p id="addshowingmessage"></p>
         </div>
